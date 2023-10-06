@@ -7,16 +7,71 @@
 
             #region Tasks
 
+
+            #region Movies
+            //mes dar sito nejome
+
+            Console.WriteLine("Movie time");
+
+            List<Movie> userMovieList = new List<Movie>();
+
+            userMovieList.Add(new Movie("The Shawshank Redemption", "Drama", 9.3));
+            userMovieList.Add(new Movie("The Godfather", "Crime", 9.2));
+            userMovieList.Add(new Movie("The Dark Knight", "Action", 9.0));
+            userMovieList.Add(new Movie("Pulp Fiction", "Crime", 8.9));
+            userMovieList.Add(new Movie("Forrest Gump", "Drama", 8.8));
+            userMovieList.Add(new Movie("Fight Club", "Drama", 8.8));
+            userMovieList.Add(new Movie("The Matrix", "Action", 8.7));
+            userMovieList.Add(new Movie("Inception", "Sci-Fi", 8.7));
+            userMovieList.Add(new Movie("Gladiator", "Action", 8.5));
+            userMovieList.Add(new Movie("The Lord of the Rings: The Fellowship of the Ring", "Adventure", 8.8));
+            userMovieList.Add(new Movie("The Lord of the Rings: The Two Towers", "Adventure", 8.7));
+            userMovieList.Add(new Movie("The Lord of the Rings: The Return of the King", "Adventure", 8.9));
+            userMovieList.Add(new Movie("The Silence of the Lambs", "Crime", 8.6));
+            userMovieList.Add(new Movie("Twilight", "Romance", 5.2));
+            userMovieList.Add(new Movie("The Emoji Movie", "Animation", 3.2));
+            userMovieList.Add(new Movie("Disaster Movie", "Comedy", 1.9));
+            userMovieList.Add(new Movie("Gigli", "Comedy", 2.4));
+            userMovieList.Add(new Movie("Catwoman", "Action", 3.3));
+            userMovieList.Add(new Movie("Jack and Jill", "Comedy", 3.3));
+            userMovieList.Add(new Movie("Battlefield Earth", "Sci-Fi", 2.4));
+
+
+
+            var kintamasis = Movie.FilterMoviesByRating(userMovieList);
+
+
+
+            foreach (var movie in kintamasis)
+            {
+                Console.WriteLine(movie.Title);//reikia nepamirsti jog liste yra daugiau dalyku, tai reik konkreciai nurodyti jog norime TITLE
+            }
+
+
+            // Now, you have all the movies stored in the userMovieList
+            // You can access and manipulate the list as needed
+
+
+
+            #endregion
+
+            #region Library
+
+
             var biblioteka = new Library();//sis objektas nera listas, o jame yra listas
             biblioteka.AddBooks("Haris Poteris");
             biblioteka.AddBooks("Ziedu Valdovas");
             biblioteka.AddBooks("Krikstatevis");
             biblioteka.RemoveBooks("Krikstatevis");
 
+
+
             foreach (string book in biblioteka.Books) //listas vadinasi "biblioteka.Books"
             {
                 Console.WriteLine(book);
             }
+            #endregion
+
 
             Console.WriteLine("-----------------------------");
             // NEW TASK
